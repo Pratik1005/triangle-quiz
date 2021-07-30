@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Triangle quiz</title>
+</head>
+<body>
+	<header>
+		<h1>Triangle Quiz</h1>
+	</header>
+	<section class="tabs">
+		<div id="tab-1" class="tab-item tab-item-background">
+			<p>Triangle sum</p>
+		</div>
+		<div id="tab-2" class="tab-item">
+			<p>Triangle quiz</p>
+		</div>
+		<div id="tab-3" class="tab-item">
+			<p>Hypotenuse</p>
+		</div>
+		<div id="tab-4" class="tab-item">
+			<p>Area</p>
+		</div>
+	</section>
+	<section class="tab-data-background">
+		<div class="container">
+		<div id="tab-1-content" class="tab-content-item show">
+			<form>
+				<p>Enter three angles of triangle and we will tell you if it makes a triangle.</p>
+				<label>a. </label><input type="number" id="first-angle" required >
+				<label>b. </label><input type="number" id="second-angle" required>
+				<label>c. </label><input type="number" id="third-angle" required>
+				<div id="output-1"></div>
+				<button class="btn" id="btn-1" type="submit">Submit</button>
+			</form>
+		</div>
+		<div id="tab-2-content" class="tab-content-item">
+			<form>
+				<div class="form-control">
+					<p><b>Note: Each question is of one point</b></p>
+					<p>Is the triangle: 100<sup>o</sup>, 60<sup>o</sup>, 20<sup>o</sup> an Obtuse angle triangle?</p>
+					<input type="radio" name="obtuse" id="obtuse-yes" value="yes"><label for="obtuse-yes">Yes</label>
+					<input type="radio" name="obtuse" id="obtuse-no" value="no"><label for="obtuse-no">No</label>
+					<div id="obtuse-ans" class="error-msg"></div>
+				</div>
+				<div class="form-control">
+					<p>Is the triangle: 95<sup>o</sup>, 40<sup>o</sup>, 45<sup>o</sup> an Acute angle triangle?</p>
+					<input type="radio" name="acute" id="acute-yes" value="yes"><label for="acute-yes">Yes</label>
+					<input type="radio" name="acute" id="acute-no" value="no"><label for="acute-no">No</label>
+					<div id="acute-ans" class="error-msg"></div>
+				</div>
+				<div class="form-control">
+					<p>Is the triangle: 90<sup>o</sup>, 30<sup>o</sup>, 60<sup>o</sup> a Right angle triangle?</p>
+					<input type="radio" name="right" id="right-yes" value="yes"><label for="right-yes">Yes</label>
+					<input type="radio" name="right" id="right-no" value="no"><label for="right-no">No</label>
+					<div id="right-ans" class="error-msg"></div>
+				</div>
+				<div class="form-control">
+					<p>The two angles of a traingle are 25<sup>o</sup> & 80<sup>o</sup>, what will be the third angle?</p>
+					<input type="radio" name="third-angle" id="third-angle-1" value="40"><label for="third-angle-1">40</label>
+					<input type="radio" name="third-angle" id="third-angle-2" value="62"><label for="third-angle-2">62</label>
+					<input type="radio" name="third-angle" id="third-angle-3" value="75"><label for="third-angle-3">75</label>
+					<div id="third-ans" class="error-msg"></div>
+				</div>
+				<div class="form-control">
+					<p>The base angles of Isosceles traingle is 50<sup>o</sup>. What will be the third angle?</p>
+					<input type="radio" name="isos" id="isos-1" value="50"><label for="isos-1">50</label>
+					<input type="radio" name="isos" id="isos-2" value="60"><label for="isos-2">60</label>
+					<input type="radio" name="isos" id="isos-3" value="80"><label for="isos-3">80</label>
+					<div id="isos-ans" class="error-msg"></div>
+				</div>
+				<div class="form-control">
+					<p>Which of the following angle will make Equilateral triangle?</p>
+					<input type="radio" name="equi" id="equi-1" value="30"><label for="equi-1">30</label>
+					<input type="radio" name="equi" id="equi-2" value="60"><label for="equi-2">60</label>
+					<input type="radio" name="equi" id="equi-3" value="90"><label for="equi-3">90</label>
+					<div id="equi-ans" class="error-msg"></div>
+				</div>
+				<div id="equi-ans" class="error-msg"></div>
+				<div id="score"></div>
+				<button class="btn" type="submit" id="btn-2">Submit</button>
+			</form>
+		</div>
+		<div id="tab-3-content" class="tab-content-item">
+			<form>
+				<div class="form-control">
+					<p>Enter the two sides of triangle to get the Hypotenuse</p>
+					<label>a. </label><input type="number" id="hypo-1" required>
+					<label>b. </label><input type="number" id="hypo-2" required>
+				</div>
+				<div id="hypo-ans"></div>
+				<button class="btn" id="btn-3" type="submit">Submit</button>
+			</form>
+		</div>
+		<div id="tab-4-content" class="tab-content-item">
+			<form>
+				<div class="form-control">
+					<p>Enter the base & height of a traingle to get the Area of triangle.</p>
+					<label>Base: </label><input type="number" id="area-base" required>
+					<label>Height: </label><input type="number" id="area-height" required>
+				</div>
+				<div id="area-ans"></div>
+				<button class="btn" id="btn-4" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+	</section>
+	
+
+	<script src="app.js"></script>
+</body>
+</html>
